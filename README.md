@@ -14,13 +14,11 @@ Here is the [Original xdaforums post](https://xdaforums.com/t/guide-unbrick-or-r
 # Use this method at your own risk! 
 
 
-To understand whether you need this project/tool to overcome your current challenges with your android phone? 
-
-Here are a few questions to consider:
+To understand whether you need this project/tool to overcome your current challenges with your android phone, here are a few questions to consider:
 1. Do you have a windows OS running on hardware? If so, you should use the [MSM tool](https://xdaforums.com/t/op7t-oos-11-0-5-1-hd65aa-ba-unbrick-tool-to-restore-your-device-to-oxygenos.3994835/) to unbrick.
     - if that isn't working out, keep reading, and also install tools for your Windows OS from [here](https://developer.android.com/tools/releases/platform-tools)
 
-1. Do you have android developer tools such as adb, fastboot, etc? x
+1. Do you have android developer tools such as adb, fastboot, etc?
     1. instructions for Mac: 
         - Homebrew
             - install [homebrew](https://brew.sh/)
@@ -60,7 +58,7 @@ https://github.com/ssut/payload-dumper-go
 
     - Follow the instructions for your operating system [here](https://github.com/ssut/payload-dumper-go) to install payload-dumper-go
 
-1. Try this the easy way
+1. ## Try this the easy way with one script to rule them all
     - run main.sh like this:
         ```
         ./main.sh <your_URL>        
@@ -71,8 +69,11 @@ https://github.com/ssut/payload-dumper-go
         ```
     - the scripts should do everything except lock your bootloader. See instructions below for that step.
 
+    #
+        If that doesn't really work out for you
+    #
 
-1. If there are any issues and you need or want to run the scripts separately:
+4. ## Run the scripts the hard way
     1. payload-dumper
         - run the `dump-payload.sh` script like this:
             - `bash dump-payload.sh`  
@@ -208,11 +209,10 @@ https://github.com/ssut/payload-dumper-go
         ```
         bash flash-images-2.sh images
         ```
-#
-### And that should unbrick your phone.
-#
-
-## Bonus section: to relock your bootloader:
+    #
+        And that should unbrick your phone.
+    #
+## Bonus section: relock your bootloader
 You can't peform this flash in fastbootd as it will fail.
 
 Do the following: 
