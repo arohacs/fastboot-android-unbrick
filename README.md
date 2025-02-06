@@ -138,25 +138,20 @@ https://github.com/ssut/payload-dumper-go
             ```
             bash flash-xbl-op7t.sh images
             ``` 
-
-
-
     1. Delete logical partitions
         - If you are confident, skip to the next section to delete the logical partitions.
         - If you are tentative, run `bash get-var.sh` to get all variables, and follow the advice from the original xda post: https://xdaforums.com/t/guide-unbrick-or-restore-to-oos-using-only-fastboot.4289013/ 
 
-                >This next section will clear the super partition (contains odm, system, system_ext, vendor and product). It's not absolutely necessary, so you can skip to the next step. Clearing the super partition will help avoid the following error, which can come up if you had manually flashed ROMs on both slots previously.
-                Code:
+            > This next section will clear the super partition (contains odm, system, system_ext, vendor and product). It's not absolutely necessary, so you can skip to the next step. Clearing the super partition will help avoid the following error, which can come up if you had manually flashed ROMs on both slots previously.
 
-                >Resizing '<partition name>'              FAILED (remote: 'Not enough space to resize partition')
+                
+                Resizing '<partition name>'              FAILED (remote: 'Not enough space to resize partition')
                 Example: Resizing 'product'                          FAILED (remote: 'Not enough space to resize partition')
+                
 
+            > If you've ever had this error or you just want to be sure that everything is cleared: before deleting, you can check the names of the logical partitions on your phone using fastboot getvar all. Scroll up to the section that looks like this:
 
-                >If you've ever had this error or you just want to be sure that everything is cleared:
-
-                >Before deleting, you can check the names of the logical partitions on your phone using fastboot getvar all. Scroll up to the section that looks like this:
-
-                >Code:
+                Code:
                 ```
                 (bootloader) is-logical:odm_a:yes
                 (bootloader) is-logical:product_a:yes
@@ -173,9 +168,9 @@ https://github.com/ssut/payload-dumper-go
                 (bootloader) is-logical:vendor_b:yes
                 ```
 
-                > As @Matt85m pointed out, you may also have:
+            > As @Matt85m pointed out, you may also have:
 
-                >Code:
+                Code:
                 ```
                 (bootloader) is-logical:odm:yes
                 (bootloader) is-logical:product:yes
@@ -184,8 +179,7 @@ https://github.com/ssut/payload-dumper-go
                 (bootloader) is-logical:vendor:yes
                 ```
 
-                >It is also possible to have logical partitions with the same names ending in -cow (system_a-cow, system_b-cow, system_ext_b-cow, vendor_a-cow, product_b-cow, etc).
-                >These are created by various ROMs during an OTA. Shout out to @mslezak for the discovery.
+            > It is also possible to have logical partitions with the same names ending in -cow (system_a-cow, system_b-cow, system_ext_b-cow, vendor_a-cow, product_b-cow, etc). These are created by various ROMs during an OTA. Shout out to @mslezak for the discovery.
 
     1. Delete all logical partitions:
         ```
@@ -238,5 +232,3 @@ Do the following:
 
         - Your phone will reboot and wipe. This is expected.
         - When your phone reboots, you will not see the warning that your bootloader is unlocked, and now you you can sell your phone, send it in for a rebate, or whatever you had planned before it was bricked.
-
-
