@@ -6,7 +6,7 @@
 This tutorial is for using fastboot to unbrick your phone because nothing else has worked and you cannot use or don't have a Windows installation on hardware and can't use the [MSM tool](https://xdaforums.com/t/op7t-oos-11-0-5-1-hd65aa-ba-unbrick-tool-to-restore-your-device-to-oxygenos.3994835/)
 
 
-All credit for the fastboot commands and process goes to xdedevelopers user: [coomac](https://xdaforums.com/m/coomac.3933373/)
+All credit for the fastboot commands and process goes to xdaforums.com user: [coomac](https://xdaforums.com/m/coomac.3933373/)
 
 Here is the [Original xdaforums post](https://xdaforums.com/t/guide-unbrick-or-restore-to-oos-using-only-fastboot.4289013/) that  [coomac](https://xdaforums.com/m/coomac.3933373/) created.  
 
